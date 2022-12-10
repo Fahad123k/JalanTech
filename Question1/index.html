@@ -33,6 +33,36 @@
         value &
         so on.</p>
     <br>
+    <h4>Sollution</h4>
+    <p>
+        function MaxToMin(arr, FirstTobe, LastTobe, n) { <br>
+            if (n % 2 == 0)  {<br>
+                n = n / 2
+            }
+            <br>
+            else { <br>
+                n -= 1
+            }
+            <br>
+
+            for (let index = 0; index < n; index++)  {<br>
+               
+                if (interSecton) { <br>
+                    SortedArr.push(arr[LastTobe--]) <br>
+                    SortedArr.push(arr[FirstTobe++])
+                }
+                <br>
+                  // this is for Exit 
+                  <br>
+                if (FirstTobe == LastTobe) { <br>
+                    SortedArr.push(arr[LastTobe]) <br>
+                    interSecton = false <br>
+                    return; <br>
+                } <br>
+            } <br>
+        }
+    </p>
+    <br>
     <h4>Output:</h4>
 
     <script>
@@ -52,20 +82,13 @@
                     SortedArr.push(arr[LastTobe--])
                     SortedArr.push(arr[FirstTobe++])
                 }
-
-
                 //     // this is for Exit
                 if (FirstTobe == LastTobe) {
                     SortedArr.push(arr[LastTobe])
                     interSecton = false
                     return;
                 }
-
-
-
-
             }
-
         }
 
         let arr = [2, 4, 6, 8, 10, 12, 14];
@@ -104,7 +127,7 @@
                 Typescript or JavaScript)
             </td>
             <td>
-                https://github.com/Fahad123k/JalanTech
+                <a href="https://github.com/Fahad123k/JalanTech">Git Repo For Jalan Tech Assignment</a>
             </td>
         </tr>
         <tr>
