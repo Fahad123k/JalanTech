@@ -5,76 +5,198 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Coffee House</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Poppins:wght@100;200;300;400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
-
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .fontCursive {
-            font-family: 'Cedarville Cursive', cursive;
-
-        }
-    </style>
-
-
-
+    <title>CoffeShop</title>
 </head>
 
 <body>
 
-    <nav class="navbar bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand fontCursive" href="#">
-                <img src="https://cdn-icons-png.flaticon.com/512/1079/1079057.png" alt="Logo" width="30" height="24"
-                    class="d-inline-block align-text-top">
-                Coffe House
-            </a>
-        </div>
-    </nav>
+    <h1>Coffe Shop by Opps</h1>
+    <script>
 
-    <div class="container-fluid">
+    
+        
+   class CoffeeHouse{
+    constructor(){
 
-        <form action="Order-coffe">
-            <!-- <input type="text" > -->
+    this.coffeeMenu = {
+            espresso: {
+                milk: 60,
+                cream: 75,
+                latte: 100
+            },
+            cappuccino: {
+                milk: 80,
+                cream: 90,
+                latte: 125
+            },
+            latte: {
+                milk: 100,
+                cream: 125,
+                latte: 150
+            }
+        }
+    }
+     
 
-            <label for="Coffe">Choose a Coffe-Variety:</label>
+     PrintMenu(coffeeMenu) {
 
-            <select name="Coffe" id="Coffe">
-                <option value="volvo">Espresso</option>
-                <option value="saab">Cappuccino</option>
-                <option value="mercedes">Latte</option>
-                <!-- <option value="audi">Audi</option> -->
-            </select>
-            <br>
-            
-            <label for="Coffe">Add ons:</label>
+console.log("+===========================+")
+console.log("+                           +")
+console.log("+                           +")
+console.log("+ _Welcom To coffe House__  +")
+console.log("+                           +")
+console.log("+===========================+\n")
 
-            <select name="Coffe" id="Coffe">
-                <option value="volvo">Normal</option>
-                <option value="saab">Milk</option>
-                <option value="mercedes">Cream</option>
-                <option value="audi">Cream</option>
-            </select>
-        </form>
-    </div>
+// for espresso
+console.log("Press 11 for espresso.milk:-  " + "$" + coffeeMenu.espresso.milk)
+console.log("Press 12 for espresso.cream:-  " + "$" + coffeeMenu.espresso.cream)
+console.log("Press 13 for espresso.latte:-  " + "$" + coffeeMenu.espresso.latte)
+console.log("=============================")
+// for cappuccino
+console.log("Press 21 for cappuccino.milk:-  " + "$" + coffeeMenu.cappuccino.milk)
+console.log("Press 22 for cappuccino.cream:-  " + "$" + coffeeMenu.cappuccino.cream)
+console.log("Press 23 for cappuccino.latte:-  " + "$" + coffeeMenu.cappuccino.latte)
+console.log("=============================")
+console.log("Press 31 for latte.milk:-  " + "$" + coffeeMenu.latte.milk)
+console.log("Press 32 for latte.cream:-  " + "$" + coffeeMenu.latte.cream)
+console.log("Press 33 for latte.latte:-  " + "$" + coffeeMenu.latte.latte)
+}
 
 
 
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+ getBill(coffeID, Qty) {
+let Total = -1;
+if (coffeID == "11") {
+    console.log("60");
+    Total = parseInt(Qty) * 60;
+}
+else if (coffeID == "12") {
+    console.log("75")
+    Total = parseInt(Qty) * 75;
+}
+
+else if (coffeID == "13") {
+    console.log("100")
+    Total = parseInt(Qty) * 100;
+}
+else if (coffeID == "21") {
+    console.log("80")
+    Total = parseInt(Qty) * 80;
+}
+else if (coffeID == "22") {
+    console.log("90")
+    Total = parseInt(Qty) * 90;
+}
+else if (coffeID == "23") {
+    console.log("125")
+    Total = parseInt(Qty) * 125;
+}
+else if (coffeID == "31") {
+    console.log("100")
+    Total = parseInt(Qty) * 100;
+}
+else if (coffeID == "32") {
+    console.log("125")
+    Total = parseInt(Qty) * 125;
+}
+else if (coffeID == "33") {
+    console.log("150")
+    Total = parseInt(Qty) * 150;
+}
+else {
+    console.log("please Choose Correct Option");
+}
+
+return Total;
+
+
+}
+
+ getCoffeeName(coffeID) {
+let CoffeName = ""
+if (coffeID == "11") {
+
+    CoffeName = "espresso.milk"
+}
+else if (coffeID == "12") {
+    // console.log("75")
+    // Total=parseInt(Qty)*75;
+}
+
+else if (coffeID == "13") {
+    CoffeName = "espresso.latte"
+    // console.log("100")
+    // Total=parseInt(Qty)*100;
+}
+else if (coffeID == "21") {
+    CoffeName = "cappuccino.milk"
+    // console.log("80")
+    // Total=parseInt(Qty)*80;
+}
+else if (coffeID == "22") {
+    CoffeName = "cappuccino.cream"
+    // console.log("90")
+    // Total=parseInt(Qty)*90;
+}
+else if (coffeID == "23") {
+
+    CoffeName = "cappuccino.latte"
+
+}
+else if (coffeID == "31") {
+    CoffeName = "latte.milk"
+}
+else if (coffeID == "32") {
+    CoffeName = "latte.cream"
+
+}
+else if (coffeID == "33") {
+    CoffeName = "latte.latte"
+}
+else {
+    CoffeName = "Incorect input"
+}
+return CoffeName;
+}
+
+
+
+ Order() {
+   
+    
+   this.PrintMenu(this.coffeeMenu);
+
+const coffeID = prompt("Enter Coffee Id ");
+const Qty = prompt("Enter Quantity");
+// alert(`Your Order is ${coffeID} total ${Qty} Cup`);
+// const TotalBill=getBill(coffeID,Qty);
+// alert(`Your ${this.getCoffeeName(coffeID)} Bill:-${this.getBill(coffeID, Qty)} $ Total Quantity:- ${Qty}`)
+console.log(`Your ${this.getCoffeeName(coffeID)} Bill:-${this.getBill(coffeID, Qty)} $ Total Quantity:- ${Qty}`)
+
+}
+
+    
+   }
+       
+
+
+        while (true) {
+            console.log("Enter 1 for Order and 2 for exit")
+            let option = prompt("Enter Choise 1 for order and 2 for exit");
+            let user1 = new CoffeeHouse();
+            if (option == "1") {
+                user1.Order()
+
+            }
+            else if (option == "2") {
+                break;
+            }
+            else {
+                console.log("choose correct option")
+            }
+        }
+
+    </script>
 </body>
 
 </html>
