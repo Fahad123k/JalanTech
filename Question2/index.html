@@ -7,180 +7,239 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoffeShop</title>
 </head>
+<style>
+    td {
+        border: 2px solid rgb(43, 28, 28);
+    }
+</style>
 
 <body>
 
-    <h1>Coffe Shop by Opps</h1>
+    <h1>Coffee Shop by Opps</h1>
+
+
+    <h4> Question 2:</h4>
+    <p>
+        
+Please implement a software for a Coffee House using Object Oriented Programming. If you are not familiar or  comfortable with object-oriented programming, we suggest you give this article a quick read to ensure you  understand it before you attempt it. 
+It should have the following features: 
+- Allow users to order a coffee from Espresso, Cappuccino, Latte. 
+- Allow users to specify add-ons: Milk, Cream, Cream
+Prices for the available options are as follows 
+
+    </p>
+
+
+
+
+    <table>
+
+        <thead>
+            <td>Description</td>
+            <td>Response</td>
+        </thead>
+        <tr>
+            <td>
+                URL that contains the solution in programming
+                language of your choice (recommended:
+                Typescript or JavaScript)
+            </td>
+            <td>
+                <a href="https://github.com/Fahad123k/JalanTech">Git Repo For Jalan Tech Assignment</a>
+                <p>
+                    https://github.com/Fahad123k/JalanTech"
+                </p>
+
+                <a href="https://codeshare.io/Jb1r4n">Codeshare.io</a>
+                <p>https://codeshare.io/Jb1r4n</p>
+
+            </td>
+        </tr>
+
+    </table>
+
+
+
     <script>
 
-    
-        
-   class CoffeeHouse{
-    constructor(){
 
-    this.coffeeMenu = {
-            espresso: {
-                milk: 60,
-                cream: 75,
-                latte: 100
-            },
-            cappuccino: {
-                milk: 80,
-                cream: 90,
-                latte: 125
-            },
-            latte: {
-                milk: 100,
-                cream: 125,
-                latte: 150
+
+        class CoffeeHouse {
+            constructor() {
+
+                this.coffeeMenu = {
+                    espresso: {
+                        milk: 60,
+                        cream: 75,
+                        latte: 100
+                    },
+                    cappuccino: {
+                        milk: 80,
+                        cream: 90,
+                        latte: 125
+                    },
+                    latte: {
+                        milk: 100,
+                        cream: 125,
+                        latte: 150
+                    }
+                }
             }
+
+
+            PrintMenu(coffeeMenu) {
+
+                console.log("+===========================+")
+                console.log("+                           +")
+                console.log("+                           +")
+                console.log("+ _Welcom To coffe House__  +")
+                console.log("+                           +")
+                console.log("+===========================+\n")
+
+                // for espresso
+                console.log("Press 11 for espresso.milk:-  " + "$" + coffeeMenu.espresso.milk)
+                console.log("Press 12 for espresso.cream:-  " + "$" + coffeeMenu.espresso.cream)
+                console.log("Press 13 for espresso.latte:-  " + "$" + coffeeMenu.espresso.latte)
+                console.log("=============================")
+                // for cappuccino
+                console.log("Press 21 for cappuccino.milk:-  " + "$" + coffeeMenu.cappuccino.milk)
+                console.log("Press 22 for cappuccino.cream:-  " + "$" + coffeeMenu.cappuccino.cream)
+                console.log("Press 23 for cappuccino.latte:-  " + "$" + coffeeMenu.cappuccino.latte)
+                console.log("=============================")
+                console.log("Press 31 for latte.milk:-  " + "$" + coffeeMenu.latte.milk)
+                console.log("Press 32 for latte.cream:-  " + "$" + coffeeMenu.latte.cream)
+                console.log("Press 33 for latte.latte:-  " + "$" + coffeeMenu.latte.latte)
+            }
+
+
+
+            getBill(coffeID, Qty) {
+                let Total = -1;
+                if (coffeID == "11") {
+                    console.log("60");
+                    Total = parseInt(Qty) * 60;
+                }
+                else if (coffeID == "12") {
+                    console.log("75")
+                    Total = parseInt(Qty) * 75;
+                }
+
+                else if (coffeID == "13") {
+                    console.log("100")
+                    Total = parseInt(Qty) * 100;
+                }
+                else if (coffeID == "21") {
+                    console.log("80")
+                    Total = parseInt(Qty) * 80;
+                }
+                else if (coffeID == "22") {
+                    console.log("90")
+                    Total = parseInt(Qty) * 90;
+                }
+                else if (coffeID == "23") {
+                    console.log("125")
+                    Total = parseInt(Qty) * 125;
+                }
+                else if (coffeID == "31") {
+                    console.log("100")
+                    Total = parseInt(Qty) * 100;
+                }
+                else if (coffeID == "32") {
+                    console.log("125")
+                    Total = parseInt(Qty) * 125;
+                }
+                else if (coffeID == "33") {
+                    console.log("150")
+                    Total = parseInt(Qty) * 150;
+                }
+                else {
+                    console.log("please Choose Correct Option");
+                }
+
+                return Total;
+
+
+            }
+
+            getCoffeeName(coffeID) {
+                let CoffeName = ""
+                if (coffeID == "11") {
+
+                    CoffeName = "espresso.milk"
+                }
+                else if (coffeID == "12") {
+                    // console.log("75")
+                    // Total=parseInt(Qty)*75;
+                }
+
+                else if (coffeID == "13") {
+                    CoffeName = "espresso.latte"
+                    // console.log("100")
+                    // Total=parseInt(Qty)*100;
+                }
+                else if (coffeID == "21") {
+                    CoffeName = "cappuccino.milk"
+                    // console.log("80")
+                    // Total=parseInt(Qty)*80;
+                }
+                else if (coffeID == "22") {
+                    CoffeName = "cappuccino.cream"
+                    // console.log("90")
+                    // Total=parseInt(Qty)*90;
+                }
+                else if (coffeID == "23") {
+
+                    CoffeName = "cappuccino.latte"
+
+                }
+                else if (coffeID == "31") {
+                    CoffeName = "latte.milk"
+                }
+                else if (coffeID == "32") {
+                    CoffeName = "latte.cream"
+
+                }
+                else if (coffeID == "33") {
+                    CoffeName = "latte.latte"
+                }
+                else {
+                    CoffeName = "Incorect input"
+                }
+                return CoffeName;
+            }
+
+
+
+            Order() {
+
+
+                this.PrintMenu(this.coffeeMenu);
+
+                const coffeID = prompt("Enter Coffee Id ");
+                const Qty = prompt("Enter Quantity");
+                // alert(`Your Order is ${coffeID} total ${Qty} Cup`);
+                // const TotalBill=getBill(coffeID,Qty);
+                // alert(`Your ${this.getCoffeeName(coffeID)} Bill:-${this.getBill(coffeID, Qty)} $ Total Quantity:- ${Qty}`)
+                console.log(`Your ${this.getCoffeeName(coffeID)} Bill:-${this.getBill(coffeID, Qty)} $ Total Quantity:- ${Qty}`)
+
+            }
+
+
         }
-    }
-     
 
-     PrintMenu(coffeeMenu) {
-
-console.log("+===========================+")
-console.log("+                           +")
-console.log("+                           +")
-console.log("+ _Welcom To coffe House__  +")
-console.log("+                           +")
-console.log("+===========================+\n")
-
-// for espresso
-console.log("Press 11 for espresso.milk:-  " + "$" + coffeeMenu.espresso.milk)
-console.log("Press 12 for espresso.cream:-  " + "$" + coffeeMenu.espresso.cream)
-console.log("Press 13 for espresso.latte:-  " + "$" + coffeeMenu.espresso.latte)
-console.log("=============================")
-// for cappuccino
-console.log("Press 21 for cappuccino.milk:-  " + "$" + coffeeMenu.cappuccino.milk)
-console.log("Press 22 for cappuccino.cream:-  " + "$" + coffeeMenu.cappuccino.cream)
-console.log("Press 23 for cappuccino.latte:-  " + "$" + coffeeMenu.cappuccino.latte)
-console.log("=============================")
-console.log("Press 31 for latte.milk:-  " + "$" + coffeeMenu.latte.milk)
-console.log("Press 32 for latte.cream:-  " + "$" + coffeeMenu.latte.cream)
-console.log("Press 33 for latte.latte:-  " + "$" + coffeeMenu.latte.latte)
-}
-
-
-
- getBill(coffeID, Qty) {
-let Total = -1;
-if (coffeID == "11") {
-    console.log("60");
-    Total = parseInt(Qty) * 60;
-}
-else if (coffeID == "12") {
-    console.log("75")
-    Total = parseInt(Qty) * 75;
-}
-
-else if (coffeID == "13") {
-    console.log("100")
-    Total = parseInt(Qty) * 100;
-}
-else if (coffeID == "21") {
-    console.log("80")
-    Total = parseInt(Qty) * 80;
-}
-else if (coffeID == "22") {
-    console.log("90")
-    Total = parseInt(Qty) * 90;
-}
-else if (coffeID == "23") {
-    console.log("125")
-    Total = parseInt(Qty) * 125;
-}
-else if (coffeID == "31") {
-    console.log("100")
-    Total = parseInt(Qty) * 100;
-}
-else if (coffeID == "32") {
-    console.log("125")
-    Total = parseInt(Qty) * 125;
-}
-else if (coffeID == "33") {
-    console.log("150")
-    Total = parseInt(Qty) * 150;
-}
-else {
-    console.log("please Choose Correct Option");
-}
-
-return Total;
-
-
-}
-
- getCoffeeName(coffeID) {
-let CoffeName = ""
-if (coffeID == "11") {
-
-    CoffeName = "espresso.milk"
-}
-else if (coffeID == "12") {
-    // console.log("75")
-    // Total=parseInt(Qty)*75;
-}
-
-else if (coffeID == "13") {
-    CoffeName = "espresso.latte"
-    // console.log("100")
-    // Total=parseInt(Qty)*100;
-}
-else if (coffeID == "21") {
-    CoffeName = "cappuccino.milk"
-    // console.log("80")
-    // Total=parseInt(Qty)*80;
-}
-else if (coffeID == "22") {
-    CoffeName = "cappuccino.cream"
-    // console.log("90")
-    // Total=parseInt(Qty)*90;
-}
-else if (coffeID == "23") {
-
-    CoffeName = "cappuccino.latte"
-
-}
-else if (coffeID == "31") {
-    CoffeName = "latte.milk"
-}
-else if (coffeID == "32") {
-    CoffeName = "latte.cream"
-
-}
-else if (coffeID == "33") {
-    CoffeName = "latte.latte"
-}
-else {
-    CoffeName = "Incorect input"
-}
-return CoffeName;
-}
-
-
-
- Order() {
-   
-    
-   this.PrintMenu(this.coffeeMenu);
-
-const coffeID = prompt("Enter Coffee Id ");
-const Qty = prompt("Enter Quantity");
-// alert(`Your Order is ${coffeID} total ${Qty} Cup`);
-// const TotalBill=getBill(coffeID,Qty);
-// alert(`Your ${this.getCoffeeName(coffeID)} Bill:-${this.getBill(coffeID, Qty)} $ Total Quantity:- ${Qty}`)
-console.log(`Your ${this.getCoffeeName(coffeID)} Bill:-${this.getBill(coffeID, Qty)} $ Total Quantity:- ${Qty}`)
-
-}
-
-    
-   }
-       
 
 
         while (true) {
+            alert(`   _Welcom To coffe House_
+                "Press 11 for espresso.milk:-   $60 
+                Press 12 for espresso.cream:-   $75
+                Press 13 for espresso.latte:-   $100
+                Press 21 for cappuccino.milk:-  $80
+                Press 22 for cappuccino.cream:- $90
+                Press 23 for cappuccino.latte:- $125
+                Press 31 for latte.milk:-       $100
+                Press 32 for latte.cream:-      $125
+                Press 33 for latte.latte:-      $150`)
             console.log("Enter 1 for Order and 2 for exit")
             let option = prompt("Enter Choise 1 for order and 2 for exit");
             let user1 = new CoffeeHouse();
@@ -195,6 +254,9 @@ console.log(`Your ${this.getCoffeeName(coffeID)} Bill:-${this.getBill(coffeID, Q
                 console.log("choose correct option")
             }
         }
+
+
+        
 
     </script>
 </body>
